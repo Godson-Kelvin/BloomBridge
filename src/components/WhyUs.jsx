@@ -8,14 +8,13 @@ export default function WhyUs() {
     <Section id="why-us" tone="muted">
       <div className="grid gap-8 lg:grid-cols-2 lg:items-end">
         <SectionHeading
-          eyebrow="Why Bloom Bridge"
+          eyebrow="Why BloomBridge"
           title="The details that make a hard journey easier"
           description="Surrogacy involves medicine, law, money and emotion. We take the coordination off your plate so you can focus on your family."
         />
         <p className="text-sm leading-relaxed text-slate-600 lg:pb-2">
           We are deliberately small. That means fewer families at once, deeper
-          relationships, and a team that recognises your voice when you call at
-          9pm from another timezone.
+          relationships, and a team that recognises your voice when you call from another timezone.
         </p>
       </div>
 

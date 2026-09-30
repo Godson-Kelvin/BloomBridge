@@ -25,9 +25,9 @@ export default function About() {
       <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <SectionHeading
-            eyebrow="About Bloom Bridge"
+            eyebrow="About BloomBridge"
             title="A bridge between families and the people who help create them."
-            description="We are a Ghanaian agency built by people who have watched families struggle with opaque agencies, unanswered calls and legal surprises. Bloom Bridge exists to make surrogacy in Ghana clear, kind and properly coordinated."
+            description="We are a Ghanaian agency built by people who have watched families struggle with opaque agencies, unanswered calls and legal surprises. BloomBridge exists to make surrogacy in Ghana clear, kind and properly coordinated."
           />
 
           <p className="mt-6 text-sm leading-relaxed text-slate-600 sm:text-base">

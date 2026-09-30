@@ -29,7 +29,7 @@ export default function Faqs() {
             <WhatsAppButton
               className="mt-5 w-full"
               label="Ask us on WhatsApp"
-              message="Hello Bloom Bridge 👋 I have a question about surrogacy in Ghana."
+              message="Hello BloomBridge 👋 I have a question about surrogacy in Ghana."
             />
           </div>
         </div>

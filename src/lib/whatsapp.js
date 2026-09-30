@@ -6,7 +6,7 @@ import { contact, defaultWhatsAppMessage } from "../config/site";
  *
  * @param {string} [message] Text that appears in the chat box when it opens.
  * @param {string} [number]  Override the agency number (digits only).
- * @returns {string} e.g. https://wa.me/233241234567?text=Hello%20Bloom%20Bridge
+ * @returns {string} e.g. https://wa.me/233503238073?text=Hello%20BloomBridge
  */
 export function buildWhatsAppLink(
   message = defaultWhatsAppMessage,
@@ -31,7 +31,7 @@ export function whatsAppLinkProps(message) {
  * @param {{name?: string, email?: string, phone?: string, role?: string, message?: string}} values
  */
 export function buildEnquiryMessage({ name, email, phone, role, message } = {}) {
-  const lines = ["Hello Bloom Bridge 👋", ""];
+  const lines = ["Hello BloomBridge 👋", ""];
 
   if (name?.trim()) lines.push(`Name: ${name.trim()}`);
   if (role?.trim()) lines.push(`I am: ${role.trim()}`);

@@ -114,7 +114,7 @@ export const features = [
 export const testimonials = [
   {
     quote:
-      "From our very first WhatsApp message, Bloom Bridge treated us like family. Every question was answered and every fee explained up front.",
+      "From our very first WhatsApp message, BloomBridge treated us like family. Every question was answered and every fee explained up front.",
     name: "Ama & Kwesi",
     detail: "Intended parents · Kumasi, Ghana",
   },
@@ -160,4 +160,4 @@ export const faqs = [
 ];
 
 export const disclaimer =
-  "Bloom Bridge is a surrogacy agency. We are not a medical practice or a law firm, and nothing on this website is medical or legal advice. All treatment is delivered by licensed clinicians and all agreements are reviewed by independent legal counsel.";
+  "BloomBridge is a surrogacy agency. We are not a medical practice or a law firm, and nothing on this website is medical or legal advice. All treatment is delivered by licensed clinicians and all agreements are reviewed by independent legal counsel.";

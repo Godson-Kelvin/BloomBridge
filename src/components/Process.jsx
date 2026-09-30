@@ -45,7 +45,7 @@ export default function Process() {
           size="lg"
           className="mt-5"
           label="Get in contact on WhatsApp"
-          message="Hello Bloom Bridge 👋 I'd like to book a free discovery chat about surrogacy in Ghana."
+          message="Hello BloomBridge 👋 I'd like to book a free discovery chat about surrogacy in Ghana."
         />
       </Reveal>
     </Section>

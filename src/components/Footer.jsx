@@ -6,12 +6,6 @@ import { buildWhatsAppLink } from "../lib/whatsapp";
 import { WhatsAppIcon } from "./icons";
 import { Container, Logo } from "./ui";
 
-const socialMarks = {
-  Instagram: "ig",
-  Facebook: "f",
-  LinkedIn: "in",
-};
-
 const supportLinks = [
   { label: "Intended parents", href: "#services" },
   { label: "Surrogate mothers", href: "#services" },
@@ -45,28 +39,6 @@ export default function Footer() {
               properly coordinated care.
             </p>
 
-            <ul className="mt-6 flex gap-2">
-              {contact.socials.map((social) => {
-                const socialMark = socialMarks[social.label];
-                return (
-                  <li key={social.label}>
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-slate-300 transition hover:border-white/25 hover:text-white"
-                    >
-                      {socialMark ? (
-                        <span className="text-xs font-bold" aria-hidden="true">
-                          {socialMark}
-                        </span>
-                      ) : null}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
 
           <nav aria-label="Explore">

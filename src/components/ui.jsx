@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Flower2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
+import logoImage from "../assets/logo.jpg";
 import {
   buttonBase,
   buttonSizes,
@@ -179,17 +180,6 @@ export function ButtonLink({
 }
 
 /** Flat brand mark — a cobalt tile with a bloom, no gradients. */
-export function Logo({ className = "h-9 w-9", onDark = false }) {
-  return (
-    <span
-      aria-hidden="true"
-      className={`grid ${className} place-items-center rounded-xl ${
-        onDark
-          ? "border border-blue-300/50 bg-blue-700 text-white"
-          : "bg-blue-700 text-white"
-      }`}
-    >
-      <Flower2 className="h-5 w-5" />
-    </span>
-  );
+export function Logo({ className = "h-9 w-9" }) {
+  return <img src={logoImage} alt="" aria-hidden="true" className={`${className} shrink-0 object-contain`} />;
 }

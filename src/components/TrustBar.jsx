@@ -3,7 +3,7 @@ import { Container, Reveal } from "./ui";
 
 export default function TrustBar() {
   return (
-    <section aria-label="Bloom Bridge at a glance" className="bg-white">
+    <section aria-label="BloomBridge at a glance" className="bg-white">
       <Container>
         <Reveal className="grid gap-x-10 gap-y-7 border-b border-slate-200 py-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (

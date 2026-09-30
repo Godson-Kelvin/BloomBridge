@@ -1,6 +1,6 @@
-# Bloom Bridge — Surrogacy Agency (Ghana)
+# BloomBridge — Surrogacy Agency (Ghana)
 
-A single-page marketing site for **Bloom Bridge**, a surrogacy agency based in Kumasi, Ghana.
+A single-page marketing site for **BloomBridge**, a surrogacy agency based in Kumasi, Ghana.
 Every call to action — the navbar, hero, process step, FAQ panel, contact form, footer and the
 floating bubble — opens **WhatsApp** with a pre-filled message.
 
@@ -44,7 +44,7 @@ export const contact = {
 - Prefer a different text for a specific button? Every button accepts a `message` prop:
 
 ```jsx
-<WhatsAppButton message="Hello Bloom Bridge, I'm interested in your surrogate programme." />
+<WhatsAppButton message="Hello BloomBridge, I'm interested in your surrogate programme." />
 ```
 
 ### How the links are built
@@ -141,13 +141,13 @@ change copy.
 ## Please note
 
 The company details, phone numbers, email, address, testimonials and statistics in this project are
-**placeholders** written to demonstrate the layout. Replace them with Bloom Bridge's real
+**placeholders** written to demonstrate the layout. Replace them with BloomBridge's real
 information (and confirm all copy about legality, costs and timelines with the agency's own
 legal/medical advisers) before publishing.
 
 The three photographs in `src/assets/` come from **Pexels** under the
 [Pexels licence](https://www.pexels.com/license/) (free to use, no attribution required). They show
-identifiable people who have **no connection to Bloom Bridge**, so for a going-live site you should
+identifiable people who have **no connection to BloomBridge**, so for a going-live site you should
 swap them for your own photography (or licensed imagery with model releases) — especially before
 using them in ads, since the licence forbids implying endorsement by the people pictured. Simply
 overwrite the three files with the same names and the layout keeps working.
