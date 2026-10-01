@@ -26,9 +26,9 @@ export const contact = {
   email: "bloombridge@gmail.com",
   emailHref: "mailto:bloombridge@gmail.com",
 
-  addressLines: ["Kumasi Metropolitan Area", "Kumasi, Ghana"],
+  addressLines: ["IPT Asuyeboa", "Kumasi, Ghana"],
 
-  hours: "Monday – Saturday · 8:00am – 6:00pm GMT",
+  hours: "Monday – Saturday · 8:00am – 5:00pm GMT",
 
   // socials: [
   //   { label: "Instagram", href: "https://instagram.com" },

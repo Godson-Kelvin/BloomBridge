@@ -82,7 +82,7 @@ export default function About() {
               Our job is to make sure nobody has to explain it twice.”
             </blockquote>
             <figcaption className="mt-5 text-sm font-semibold text-slate-900">
-              Naa Adjoa Mensah
+              Williams Darkwah Kwakye
               <span className="block font-normal text-slate-500">
                 Founder & Lead Case Manager
               </span>

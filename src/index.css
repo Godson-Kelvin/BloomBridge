@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+  BloomBridge design tokens (Tailwind CSS v4 @theme)
+   Every token below becomes a utility, e.g. bg-bloom-500, shadow-soft
+   --------------------------------------------------------------- */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+
+  /* Brand: "bloom" (warm pink) */
+  --color-bloom-50: #fff1f6;
+  --color-bloom-100: #ffe3ee;
+  --color-bloom-200: #ffc8dd;
+  --color-bloom-300: #ff9dc2;
+  --color-bloom-400: #fb64a0;
+  --color-bloom-500: #f0367f;
+  --color-bloom-600: #dd1664;
+  --color-bloom-700: #bb0a51;
+  --color-bloom-800: #9c0d46;
+  --color-bloom-900: #83103f;
+
+  /* Brand: "bridge" (calm teal) */
+  --color-bridge-50: #eefaf7;
+  --color-bridge-100: #d5f2ec;
+  --color-bridge-200: #aee6dc;
+  --color-bridge-300: #7bd2c6;
+  --color-bridge-400: #45b6aa;
+  --color-bridge-500: #279a90;
+  --color-bridge-600: #1d7b75;
+  --color-bridge-700: #1b625e;
+  --color-bridge-800: #1a4f4d;
+  --color-bridge-900: #194341;
+
+  /* Neutrals */
+  --color-ink: #1b1233;
+  --color-ink-soft: #57496e;
+  --color-cream: #fffaf6;
+
+  /* WhatsApp brand green */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe5b;
+  --color-whatsapp-ink: #06301b;
+
+  --shadow-soft: 0 24px 60px -32px rgb(27 18 51 / 0.35);
+  --shadow-glow: 0 18px 40px -18px rgb(221 22 100 / 0.45);
+  --shadow-glass: 0 32px 64px -32px rgb(21 13 42 / 0.38);
+  --shadow-glass-lg: 0 48px 90px -40px rgb(21 13 42 / 0.5);
+  --shadow-lift: 0 22px 45px -20px rgb(21 13 42 / 0.45);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    /* Soft colour mesh behind everything so the glass panels have something to blur */
+    background-image:
+      radial-gradient(58rem 40rem at 8% -10%, rgb(240 54 127 / 0.18), transparent 62%),
+      radial-gradient(52rem 36rem at 92% 4%, rgb(39 154 144 / 0.2), transparent 60%),
+      radial-gradient(44rem 30rem at 70% 52%, rgb(124 58 237 / 0.12), transparent 62%),
+      radial-gradient(50rem 34rem at 12% 96%, rgb(56 189 248 / 0.14), transparent 62%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-bloom-200);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-bloom-400);
+    outline-offset: 2px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Glassmorphism utilities
+   Use as: class="glass-panel", "glass-card", "glass-dark", "glass-pill"
+   ------------------------------------------------------------------ */
+@utility glass-panel {
+  background-color: rgb(255 255 255 / 0.45);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.6),
+    var(--shadow-glass-lg);
+}
+
+@utility glass-card {
+  background-color: rgb(255 255 255 / 0.62);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgb(255 255 255 / 0.6);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.7),
+    var(--shadow-glass);
+}
+
+@utility glass-soft {
+  background-color: rgb(255 255 255 / 0.35);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgb(255 255 255 / 0.45);
+}
+
+@utility glass-dark {
+  background-color: rgb(21 13 42 / 0.42);
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+  border: 1px solid rgb(255 255 255 / 0.18);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.16),
+    0 40px 80px -40px rgb(0 0 0 / 0.65);
+}
+
+@utility glass-pill {
+  background-color: rgb(255 255 255 / 0.5);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgb(255 255 255 / 0.6);
+}
+
+@utility glass-bar {
+  background-color: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgb(255 255 255 / 0.6);
+  box-shadow: 0 24px 48px -36px rgb(21 13 42 / 0.55);
+}
+
+@utility glass-bar-dark {
+  background-color: rgb(21 13 42 / 0.32);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgb(255 255 255 / 0.14);
+}
+
+@utility glass-input {
+  background-color: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.7);
+}
+
+/* Scroll-reveal (used by the <Reveal /> component) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Soft floating decorative blobs */
+.bloom-float {
+  animation: bloomFloat 11s ease-in-out infinite;
+}
+
+.bloom-float-slow {
+  animation: bloomFloat 16s ease-in-out infinite reverse;
+}
+
+@keyframes bloomFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) scale(1.04);
+  }
+}
+
+/* Gentle pulse ring for the floating WhatsApp button */
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 2px solid rgb(37 211 102 / 0.6);
+  animation: pulseRing 2.4s ease-out infinite;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .bloom-float,
+  .bloom-float-slow,
+  .pulse-ring::after {
+    animation: none;
+  }
+}
